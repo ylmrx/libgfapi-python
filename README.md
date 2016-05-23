@@ -23,7 +23,7 @@ from gluster import gfapi
 import os
 
 ## Create virtual mount
-volume = gfapi.Volume(....)
+volume = gfapi.Volume('host', 'vol_name')
 volume.mount()
 
 ## Create a new directory
@@ -51,7 +51,7 @@ with volume.fopen('somefile.txt','a+') as fd:
 volume.unlink('somefile.txt')
 
 ## Unmount a volume
-volume.unmount()
+volume.umount()
 
 ```
 # Development
